@@ -1,0 +1,14 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins" as *;
+
+.explore {
+  h2 {
+    margin-bottom: 64px;
+  }
+
+  @include media(tablet-wide) {
+    h2 {
+      margin-bottom: 30px;
+    }
+  }
+}
