@@ -4,13 +4,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 :root {
-  --content-width: 1200px;
+  --content-width: 1320px;
   --container-offset: 16px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // font-family
   --font-family-primary: "Manrope", sans-serif;
-  --font-family-secondary: "Bebas Neue", sans-serif;
+  --font-family-secondary: "Satoshi", sans-serif;
 
   // font-weight
   --fw-300: 300;
@@ -24,17 +24,17 @@
   //
   --color-white: #fff;
   --color-black: #000;
-  --color-dark-900: #0B1522;
+  --color-dark-900: #0b1522;
+  --color-gray-50: #f3f3f3;
   --color-gray-100: #eeeeee;
-  --color-gray-300: #ababab;
-  --color-blue-100: #EBF2FA;
-   --color-blue-300: #89ABE3;
-   --color-blue-400: #5679A6;
-   --color-blue-600: #122339;
+  --color-gray-300: #acacac;
+  --color-blue-100: #ebf2fa;
+  --color-blue-300: #89abe3;
+  --color-blue-400: #5679a6;
+  --color-blue-600: #122339;
   --color-red-400: #d91023;
 
   //  radius
   --radius-main: 10px;
   --radius-big: 24px;
-
 }

@@ -12,7 +12,7 @@
 
 @mixin mask {
   content: "";
-  position: absolute;
+  position: relative;
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: cover;

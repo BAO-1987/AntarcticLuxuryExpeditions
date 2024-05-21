@@ -4,62 +4,52 @@
 .nav {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 
   &__inner {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
     width: 100%;
   }
 
   &__list {
     display: flex;
-    align-items: center;
-    margin-right: 64px;
+    flex-direction: column;
+    margin: 0  auto;
+    padding-left: 60px;
   }
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: 32px;
+      margin-bottom: 8px;
     }
   }
 
   &__link {
     font-weight: var(--fw-500);
     font-size: 16px;
-    line-height: 1;
-    transition: color 0.3s linear;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    transition: opacity 0.3s linear;
 
     &:hover {
       color: var(--color-blue-300);
     }
 
     &.true {
-      color: var(--color-blue-300);
+      opacity: 0.5;
     }
   }
 
   &__btns {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
   }
 
-  &__block {
-    display: grid;
-    font-size: clamp(1.125rem, 1.0833rem + 0.1852vi, 1.25rem);
-    gap: 24px;
-
-    .logo {
-      max-width: 204px;
-    }
-  }
-
-  &--footer {
-    padding: 55px 0;
-  }
 
   @include media(desktop) {
     &__item {

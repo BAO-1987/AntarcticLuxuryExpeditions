@@ -3,14 +3,24 @@
 
 .faq {
   &__item {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -60px;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-white);
+      opacity: 0.2;
+    }
+
     &:not(:last-child) {
-      margin-bottom: 18px;
+      margin-bottom: 60px;
     }
   }
 
   details {
-    background-color: var(--color-blue-100);
-
     &[open] {
       summary {
         padding-bottom: 0;
@@ -27,17 +37,20 @@
     display: flex;
     align-items: center;
     padding: 24px 32px 34px;
-    font-weight: var(--fw-700);
-    font-size: 20px;
-    color: var(--color-blue-400);
+    font-size: clamp(18px, 0.8333rem + 1.2963vi, 32px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
     cursor: pointer;
 
     &::after {
-      @include mask;
-
+      content: "";
+      position: absolute;
       right: 32px;
       top: 32px;
-      mask-image: url("../images/icons/chevron.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("../images/icons/chevron.svg");
       width: 32px;
       height: 32px;
       transform: scaleY(-1);
@@ -47,7 +60,6 @@
     + div {
       padding: 12px 0 34px 34px;
       width: 94%;
-      color: var(--color-dark-900);
     }
   }
 

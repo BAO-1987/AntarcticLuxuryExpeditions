@@ -13,10 +13,10 @@ body {
   font-weight: var(--fw-400);
   font-style: normal;
   font-size: clamp(16px, 1vw, 20px);
-  line-height: 1.5;
+  line-height: 1.4;
   letter-spacing: 0;
   color: var(--color-white);
-  background-color: var(--color-white);
+  background-color: var(--color-black);
   font-optical-sizing: auto;
   scroll-padding: var(--header-height);
 
@@ -121,11 +121,30 @@ body {
   }
 }
 
+.overlay {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background:
+      linear-gradient(180deg, rgba(5, 6, 11, 0.19), rgba(5, 6, 11, 0) 50%, rgb(5, 6, 11) 100%), rgba(5, 6, 11, 0.4),;
+    inset: 0;
+  }
+
+  &--gray {
+    &::before {
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
 .logo {
   display: flex;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 268px;
+  max-width: 280px;
 }
