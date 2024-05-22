@@ -3,28 +3,21 @@
 @use "../utils/mixins/" as *;
 
 .reviews {
-  padding-bottom: 150px;
+  padding-bottom: 165px;
 
-  &__title {
-    margin-bottom: 60px;
-
-    h2 {
-      margin-bottom: 4px;
-    }
-  }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     max-width: 947px;
-    margin: 0 auto 48px;
+    margin: 0 auto 131px;
     gap: 38px;
   }
 
   &__item {
     &:first-of-type {
-      padding-top: 58px;
+      translate: 0 54px;
     }
   }
 
@@ -35,6 +28,17 @@
     right: 50px;
     width: 100%;
     max-width: 354px;
+  }
+
+  .subtext {
+    width: 100%;
+    max-width: 712px;
+    translate: 192px 0;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: clamp(25px, -0.8333rem + 10.6481vi, 140px);
   }
 
   h3 {

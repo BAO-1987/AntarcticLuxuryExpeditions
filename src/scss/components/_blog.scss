@@ -22,7 +22,7 @@
     border-radius: 10px;
 
     &:first-of-type {
-      padding-top: 53px;
+      translate: 0 53px;
     }
   }
 
@@ -38,6 +38,7 @@
     z-index: 1;
     font-size: clamp(1.5625rem, -0.8333rem + 10.6481vi, 8.75rem);
     line-height: 1.2;
+    letter-spacing: -0.021em;
     text-align: center;
 
     span {
@@ -81,6 +82,33 @@
       mask-image: url("../images/icons/arrow-small.svg");
       width: 18px;
       height: 16px;
+    }
+
+    &:hover {
+      color: var(--color-blue-200);
+    }
+  }
+
+  &--main {
+
+    .blog__list {
+      translate: none;
+    }
+
+    .blog__item {
+      min-height: 556px;
+
+      &:first-of-type {
+        translate: none;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+
+    h2 {
+      margin-bottom: 48px;
     }
   }
 }

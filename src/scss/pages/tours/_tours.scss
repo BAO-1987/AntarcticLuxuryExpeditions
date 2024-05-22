@@ -22,9 +22,9 @@
     z-index: 1;
 
     p {
-      margin-bottom: 64px;
+      margin-bottom: 76px;
       width: 100%;
-      max-width: 455px;
+      max-width: 400px;
     }
   }
 
@@ -32,8 +32,14 @@
     #{$root}__content {
       margin-left: auto;
       width: 100%;
-      max-width: 530px;
+      max-width: 600px;
     }
+  }
+
+  h2 {
+    margin-bottom: 71px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
 
   @include media(mobile-l) {

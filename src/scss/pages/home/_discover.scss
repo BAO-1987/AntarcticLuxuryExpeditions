@@ -3,6 +3,7 @@
 
 .discover {
   padding: 150px 0;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -36,6 +37,7 @@
       align-items: center;
       font-size: 12px;
       color: var(--color-black);
+      transition: color 0.3s linear;
       gap: 10px;
 
       &::before {
@@ -49,7 +51,11 @@
 
         mask-image: url("../images/icons/arrow-small.svg");
         width: 7px;
-        height: 8px;
+        height: 6px;
+      }
+
+      &:hover {
+        color: var(--color-blue-200);
       }
     }
   }
@@ -98,6 +104,7 @@
       font-size: 23px;
       color: var(--color-black);
       background-color: var(--color-white);
+      transition: color 0.3s linear;
       gap: 10px;
 
       &::before {
@@ -109,9 +116,15 @@
       &::after {
         @include mask;
 
+        position: absolute;
+        right: 40px;
         mask-image: url("../images/icons/arrow-small.svg");
-        width: 7px;
-        height: 8px;
+        width: 18px;
+        height: 16px;
+      }
+
+      &:hover {
+        color: var(--color-blue-200);
       }
     }
   }
@@ -124,5 +137,9 @@
     top: 47%;
     transform: translateY(-50%);
     text-align: center;
+  }
+
+  &--tours {
+    padding: 0 0 131px;
   }
 }

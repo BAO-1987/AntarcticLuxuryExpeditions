@@ -3,6 +3,7 @@
 @use "../utils/mixins/" as *;
 
 .about {
+  padding-top: 50px;
   position: relative;
   z-index: 1;
 
@@ -76,13 +77,7 @@
     }
   }
 
-  // &--home {
-  //   margin-top: -490px;
-  // }
-
-  &--main {
-    padding-top: 75px;
-
+  &--reverse {
     .about__desc {
       &::before {
         right: auto;
