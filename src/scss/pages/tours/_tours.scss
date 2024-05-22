@@ -14,47 +14,31 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 479px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      background-color: rgba(0, 0, 0, 0.4);
-      inset: 0;
-    }
+    min-height: 900px;
   }
 
   &__content {
     position: relative;
     z-index: 1;
-    margin-left: auto;
+    margin-right: auto;
     width: 100%;
-    max-width: 570px;
-  }
+    max-width: 530px;
 
-  &--reverse {
-    #{$root}__content {
-      margin-left: 0;
+    p {
+      margin-bottom: 64px;
+      width: 100%;
+      max-width: 455px;
     }
   }
 
-  h2 {
-    margin-bottom: 32px;
-    line-height: 1.2;
-    color: var(--color-white);
-    text-align: left;
-  }
-
-  p {
-    margin-bottom: 32px;
-    font-size: clamp(1rem, 0.9167rem + 0.3704vi, 1.25rem);
-    line-height: 1.6;
-  }
-
-  .btn {
-    min-width: 246px;
-  }
+    &--reverse {
+      #{$root}__content {
+        margin-right: 0;
+        margin-left: auto;
+      }
+    }
+  
+  
 
   @include media(mobile-l) {
     &__inner {

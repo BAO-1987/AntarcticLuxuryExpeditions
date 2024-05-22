@@ -2,6 +2,8 @@
 @use "../utils/mixins/" as *;
 
 .faq {
+  padding: 32px 0 126px;
+
   &__item {
     position: relative;
 
@@ -16,7 +18,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 60px;
+      margin-bottom: 45px;
     }
   }
 
@@ -36,7 +38,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding: 24px 32px 34px;
+    padding: 40px 32px 34px 0;
     font-size: clamp(18px, 0.8333rem + 1.2963vi, 32px);
     line-height: 1.1;
     letter-spacing: -0.01em;
@@ -45,20 +47,20 @@
     &::after {
       content: "";
       position: absolute;
-      right: 32px;
-      top: 32px;
+      right: 0;
+      top: 41px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url("../images/icons/chevron.svg");
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
       transform: scaleY(-1);
       transition: transform 0.3s linear;
     }
 
     + div {
-      padding: 12px 0 34px 34px;
+      padding: 24px 0 34px 0;
       width: 94%;
     }
   }

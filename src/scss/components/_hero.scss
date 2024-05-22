@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     min-height: 1440px;
 
     &::before {
@@ -28,22 +28,20 @@
   }
 
   &__content {
-    padding-top: 150px;
+    padding: 138px 0 123px;
     position: relative;
     z-index: 1;
 
-
-    p {
+    .subtext {
       width: 100%;
       max-width: 400;
-      font-size: clamp(16px, 1.0208rem + 0.463vi, 1.4375rem);
-      color: var(--color-gray-50);
+      margin-bottom: 167px;
     }
   }
 
   &__bottom {
-    padding-top: 100px;
-    
+    // padding-top: 160px;
+
     p {
       font-weight: var(--fw-300);
       font-size: clamp(35px, 0.8333rem + 6.0185vi, 100px);
@@ -56,7 +54,21 @@
   }
 
   h1 {
-    margin-bottom: 134px;
+    margin-bottom: 148px;
     text-align: center;
+  }
+
+  &--home {
+    .hero__content {
+      margin-bottom: 179px;
+      padding: 0;
+    }
+    .subtext {
+      translate: 0 15px;
+    }
+
+    h1 {
+      margin-bottom: 134px;
+    }
   }
 }

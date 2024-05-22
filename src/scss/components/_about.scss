@@ -32,13 +32,10 @@
 
     p {
       text-align: center;
-      translate: 0 -85px;
     }
   }
 
   &__content {
-    translate: 0 -172px;
-
     p {
       width: 100%;
       max-width: 601px;
@@ -50,8 +47,9 @@
 
   &__title {
     position: relative;
-    margin-bottom: 212px;
+    margin-bottom: -12px;
     text-align: center;
+    translate: 0 -172px;
 
     &::before {
       content: "";
@@ -79,7 +77,18 @@
   }
 
   &--home {
-    transform: 0 -490px;
+    margin-top: -490px;
+  }
+
+  &--main {
+    padding-top: 75px;
+
+    .about__desc {
+      &::before {
+        right: auto;
+        left: 0;
+      }
+    }
   }
 
   h2 {

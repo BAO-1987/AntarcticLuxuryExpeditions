@@ -2,85 +2,65 @@
 @use "../utils/mixins/" as *;
 
 .contacts {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
   &__inner {
     position: relative;
-    z-index: 1;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 688px;
+    justify-content: space-between;
+    padding: 100px 0;
 
     &::before {
       content: "";
       position: absolute;
-      z-index: -1;
-      background-color: rgba(0, 0, 0, 0.2);
-      inset: 0;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-white);
+      opacity: 0.2;
     }
   }
 
   &__form {
+    display: flex;
+    gap: 16px;
     width: 100%;
-    max-width: 598px;
-    margin-inline: auto;
+    max-width: 438px;
 
-    label,
-    textarea {
+    label {
       border: 0;
       width: 100%;
     }
 
-    input,
-    textarea {
-      padding: 19px 16px;
+    input {
+      overflow: hidden;
+      border-radius: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 9px 19px;
       width: 100%;
       max-width: 100%;
-      color: var(--color-blue-400);
-      background-color: var(--color-white);
+      color: var(--color-gray-50);
+      background-color: transparent;
 
       &::placeholder {
-        font-size: 16px;
-        color: var(--color-blue-400);
+        font-size: 14px;
+        color: var(--color-gray-50);
+        text-transform: uppercase;
       }
-    }
-
-    textarea {
-      min-height: 156px;
-      resize: none;
     }
   }
 
-  label {
-    display: block;
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    }
-
-    &:last-of-type {
-      margin-bottom: 32px;
-    }
+  .subtext {
+    width: 100%;
+    max-width: 610px;
   }
 
   h2 {
-    margin-bottom: 32px;
-    color: var(--color-white);
-  }
-
-  .btn {
-    padding: 22px;
-    max-width: 100%;
-    background-color: var(--color-blue-300);
+    margin-bottom: 30px;
+    font-size: clamp(35px, 0.8333rem + 6.0185vi, 100px);
+    line-height: 1.05;
   }
 
   @include media(tablet) {
-    &__inner {
-      min-height: 500px;
-    }
   }
 
   @include media(mobile-l) {

@@ -2,6 +2,8 @@
 @use "../../utils/mixins" as *;
 
 .team {
+  padding: 86px 0 150px;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -34,8 +36,13 @@
     color: var(--color-gray-300);
   }
 
+  h2 {
+    margin-bottom: 56px;
+  }
+
   h3 {
     font-weight: var(--fw-500);
+    font-size: 25px;
     color: var(--color-black);
   }
 }

@@ -2,6 +2,7 @@
 @use "../../utils/mixins" as *;
 
 .discover {
+  padding: 150px 0;
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -19,11 +20,11 @@
     position: absolute;
     overflow: hidden;
     border-radius: 10px;
-    bottom: 25px;
+    bottom: 17px;
     left: 20px;
     right: 20px;
     width: 100%;
-    max-width: 389px;
+    max-width: 386px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,12 +84,18 @@
     a {
       position: absolute;
       z-index: 1;
-      top: 50%;
-      margin: 0 auto;
-      transform: translateY(-50%);
       display: flex;
       align-items: center;
-      font-size: 12px;
+      overflow: hidden;
+      border-radius: 10px;
+      padding: 42px 30px;
+      width: 100%;
+      max-width: 312px;
+      top: 50%;
+      left: 50%;
+      margin: 0 auto;
+      transform: translate(-50%, -50%);
+      font-size: 23px;
       color: var(--color-black);
       background-color: var(--color-white);
       gap: 10px;
@@ -114,7 +121,7 @@
     left: 0;
     right: 0;
     z-index: 1;
-    top: 50%;
+    top: 47%;
     transform: translateY(-50%);
     text-align: center;
   }
