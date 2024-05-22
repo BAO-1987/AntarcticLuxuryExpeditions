@@ -20,9 +20,6 @@
   &__content {
     position: relative;
     z-index: 1;
-    margin-right: auto;
-    width: 100%;
-    max-width: 530px;
 
     p {
       margin-bottom: 64px;
@@ -31,14 +28,13 @@
     }
   }
 
-    &--reverse {
-      #{$root}__content {
-        margin-right: 0;
-        margin-left: auto;
-      }
+  &--reverse {
+    #{$root}__content {
+      margin-left: auto;
+      width: 100%;
+      max-width: 530px;
     }
-  
-  
+  }
 
   @include media(mobile-l) {
     &__inner {

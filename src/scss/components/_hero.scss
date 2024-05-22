@@ -4,10 +4,10 @@
 .hero {
   $root: &;
 
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  // position: relative;
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
 
   &__inner {
     position: relative;
@@ -16,7 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    min-height: 1440px;
+    min-height: 900px;
 
     &::before {
       content: "";

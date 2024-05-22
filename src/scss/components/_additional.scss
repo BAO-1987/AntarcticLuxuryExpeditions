@@ -40,4 +40,9 @@
       margin-left: 184px;
     }
   }
+
+  h2 {
+    margin-bottom: 48px;
+    font-size: clamp(1.125rem, 0.8333rem + 1.2963vi, 2rem);
+  }
 }
