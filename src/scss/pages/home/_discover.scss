@@ -15,22 +15,26 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+
+    img {
+      width: 100%;
+    }
   }
 
   &__link {
     position: absolute;
-    overflow: hidden;
-    border-radius: 10px;
+    left: 50%;
     bottom: 17px;
-    left: 20px;
-    right: 20px;
-    width: 100%;
-    max-width: 386px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
+    border-radius: 10px;
     padding: 20px;
+    width: 100%;
+    max-width: 386px;
     background-color: var(--color-white);
+    transform: translateX(-50%);
 
     a {
       display: flex;
@@ -127,6 +131,10 @@
         color: var(--color-blue-200);
       }
     }
+
+    img {
+      min-height: 150px;
+    }
   }
 
   h3 {
@@ -141,5 +149,59 @@
 
   &--tours {
     padding: 0 0 131px;
+  }
+
+  @include media(tablet-wide) {
+    padding: 80px 0;
+  }
+
+  @include media(tablet) {
+    padding: 35px 0;
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      &:last-child {
+        grid-column: 2 span;
+
+        img {
+          object-position: top;
+          aspect-ratio: 2/1;
+        }
+      }
+    }
+
+    &__link {
+      padding: 10px;
+    }
+
+    &__image {
+      a {
+        padding: 16px;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__link {
+      bottom: 0;
+    }
+
+    &__item {
+      img {
+        object-position: top;
+        aspect-ratio: 2/1;
+      }
+
+      &:last-child {
+        grid-column: auto;
+      }
+    }
   }
 }

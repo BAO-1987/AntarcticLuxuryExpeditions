@@ -3,9 +3,9 @@
 @use "../utils/mixins/" as *;
 
 .about {
-  padding-top: 50px;
   position: relative;
   z-index: 1;
+  padding-top: 50px;
 
   &__inner {
     display: grid;
@@ -71,18 +71,9 @@
       font-weight: var(--fw-500);
       font-size: 18px;
       text-align: center;
-      color: var(--color-white);
       text-transform: uppercase;
+      color: var(--color-gray-300);
       mix-blend-mode: difference;
-    }
-  }
-
-  &--reverse {
-    .about__desc {
-      &::before {
-        right: auto;
-        left: 0;
-      }
     }
   }
 
@@ -93,5 +84,76 @@
     font-size: clamp(45px, 2.2917rem + 2.3148vi, 70px);
     line-height: 1.1;
     text-align: center;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &--reverse {
+    .about__desc {
+      &::before {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    padding-top: 30px;
+
+    &__inner {
+      gap: 30px;
+    }
+
+    &__desc {
+      padding: 0 50px;
+    }
+  }
+
+  @include media(tablet) {
+    &__inner {
+      justify-content: center;
+      grid-template-columns: 1fr;
+    }
+
+    &__desc {
+      padding: 0;
+      max-width: 100%;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &__title {
+      margin: 0;
+      translate: none;
+
+      &::before {
+        bottom: -20px;
+      }
+
+      span {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__content {
+      p {
+        max-width: 100%;
+      }
+    }
+
+    img {
+      margin-bottom: 15px;
+      object-position: center;
+      aspect-ratio: 16/10;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
   }
 }

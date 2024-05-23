@@ -71,12 +71,13 @@
   }
 
   @include media(tablet) {
+    padding-bottom: 50;
     &__item {
       summary {
         padding: 16px 45px 16px 16px;
 
         &::after {
-          right: 14px;
+          top: 14px;
         }
 
         + div {

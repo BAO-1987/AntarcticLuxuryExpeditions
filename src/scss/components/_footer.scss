@@ -4,10 +4,18 @@
 .footer {
   padding-top: 100px;
 
+  a {
+    transition: color 0.3s linear; 
+
+    &:hover {
+      color: var(--color-blue-200);
+    }
+  }
+
   &__image {
     border: 1px solid var(--color-white);
-    border-left: none;
     border-right: none;
+    border-left: none;
 
     img {
       width: 100%;
@@ -21,22 +29,23 @@
     padding: 32px 0;
   }
 
-    &__link {
+  &__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    flex-wrap: wrap;
+    font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
     color: var(--color-blue-50);
     gap: 11px;
 
     &::before {
       content: "";
       position: relative;
+      width: 40px;
+      height: 40px;
       background-image: url("../images/icons/mail.svg");
       background-position: center;
       background-size: cover;
-      width: 40px;
-      height: 40px;
     }
   }
 
@@ -51,9 +60,17 @@
     }
   }
 
+  @include media(tablet-wide) {
+    padding-top: 80px;
+  }
 
+  @include media(tablet) {
+    padding-top: 50px;
+  }
 
   @include media(mobile-l) {
+    padding-top: 25px;
+
     &__copy {
       flex-direction: column;
       justify-content: center;
@@ -64,9 +81,11 @@
     &__policy {
       justify-content: center;
     }
+  }
 
-    .logo {
-      margin: 0 auto;
+  @include media(mobile-m) {
+    &__link {
+      
     }
   }
 }

@@ -3,18 +3,18 @@
 
 .blog {
   position: relative;
+  z-index: 1;
   padding-bottom: 150px;
 
   &__list {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 auto 38px;
-    z-index: 1;
-    position: relative;
     width: 100%;
     max-width: 947px;
-    translate: 0 -38px;
     gap: 38px;
+    translate: 0 -38px;
   }
 
   &__item {
@@ -33,18 +33,18 @@
   }
 
   h2 {
-    margin-bottom: 0;
     position: relative;
     z-index: 1;
+    margin-bottom: 0;
     font-size: clamp(1.5625rem, -0.8333rem + 10.6481vi, 8.75rem);
     line-height: 1.2;
     letter-spacing: -0.021em;
     text-align: center;
 
     span {
+      display: inline-block;
       padding-right: 181px;
       translate: 0 56px;
-      display: inline-block;
     }
   }
 
@@ -58,23 +58,17 @@
   }
 
   a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border-radius: 50%;
     width: 80px;
     height: 80px;
     background-color: var(--color-black);
-    border-radius: 50%;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-    }
+    transform: translate(-50%, -50%);
 
     &::after {
       @include mask;
@@ -89,8 +83,11 @@
     }
   }
 
-  &--main {
+  img {
+    width: 100%;
+  }
 
+  &--main {
     .blog__list {
       translate: none;
     }
@@ -109,6 +106,72 @@
 
     h2 {
       margin-bottom: 48px;
+    }
+  }
+
+  @include media(tablet-wide) {
+    padding-bottom: 80px;
+
+    &__list {
+      translate: 0 -10px;
+    }
+
+    h2 {
+      span {
+        translate: 0 20px;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    padding-bottom: 50px;
+
+    .subtext {
+      max-width: 100%;
+      translate: 0 20px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__list {
+      grid-template-columns: 1fr;
+      translate: none;
+    }
+
+    &__item {
+      &:first-of-type {
+        translate: none;
+      }
+
+      img {
+        min-height: 220px;
+        object-position: top;
+        aspect-ratio: 2/1;
+      }
+    }
+
+    h2 {
+      margin-bottom: 10px;
+
+      span {
+        padding: 0;
+        translate: none;
+      }
+    }
+
+    &--main {
+      .blog__item {
+        min-height: 250px;
+      }
+    }
+
+    h3 {
+      bottom: 20px;
+    }
+
+    a {
+      width: 40px;
+      height: 40px;
     }
   }
 }

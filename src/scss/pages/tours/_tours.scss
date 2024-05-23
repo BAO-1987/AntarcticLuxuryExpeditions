@@ -42,17 +42,32 @@
     letter-spacing: -0.02em;
   }
 
-  @include media(mobile-l) {
+  @include media(tablet) {
     &__inner {
       min-height: 400px;
     }
+
+     #{$root}__content {
+      max-width: 100%;
+     }
+    
+    h2 {
+      margin-bottom: 30px;
+    }
   }
 
-  @include media(mobile-m) {
+  @include media(mobile-l) {
     &__inner {
       min-height: 350px;
     }
 
+    p {
+      margin-bottom: 35px;
+      max-width: 100%;
+    }
+  }
+
+  @include media(mobile-m) {
     .btn {
       max-width: 100%;
     }

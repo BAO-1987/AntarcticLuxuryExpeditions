@@ -8,10 +8,8 @@
   padding: 0;
   width: 100%;
   background-color: transparent;
-  transition-property: background-color, transform;
+  transition-property: background-color, transform, padding;
   transition-duration: 0.25s;
-
-
 
   &.hide {
     transform: translateY(-200%);
@@ -20,15 +18,16 @@
   &.scroll,
   &.active,
   &--colored {
-    top: 10px;
     background: var(--color-black);
   }
 
-  @include media(desktop) {
-    .logo {
-      margin-right: 15px;
-      max-width: 200px;
-    }
+  &.scroll {
+    top: 0;
+    padding: 16px 0;
   }
 
+  @include media(tablet) {
+    top: 0;
+    padding: 16px 0;
+  }
 }

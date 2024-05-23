@@ -4,8 +4,6 @@
 .additional {
   $root: &;
 
-  padding: 86px 0;
-
   &__wrapper {
     display: flex;
     align-items: center;
@@ -17,9 +15,10 @@
   }
 
   &__image {
+    --margin: 184px;
     overflow: hidden;
     border-radius: 10px;
-    margin-right: 184px;
+    margin-right: var(--margin);
     width: calc(100% - 566px - 184px);
 
     img {
@@ -37,12 +36,47 @@
 
     #{$root}__image {
       margin-right: 0;
-      margin-left: 184px;
+      margin-left: var(--margin);
     }
   }
 
   h2 {
     margin-bottom: 48px;
     font-size: clamp(1.125rem, 0.8333rem + 1.2963vi, 2rem);
+  }
+
+  @include media(tablet-wide) {
+    #{$root}__image {
+      --margin: 100px;
+      width: 550px;
+    }
+  }
+
+  @include media(tablet) {
+    #{$root}__wrapper {
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding: 0 16px;
+      gap: 30px;
+    }
+
+    #{$root}__image {
+      --margin: 0;
+
+      width: 100%;
+
+      img {
+        aspect-ratio: 2/1;
+      }
+    }
+
+   #{$root}__content {
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
   }
 }

@@ -5,13 +5,12 @@
 .reviews {
   padding-bottom: 165px;
 
-
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto 131px;
     width: 100%;
     max-width: 947px;
-    margin: 0 auto 131px;
     gap: 38px;
   }
 
@@ -23,11 +22,11 @@
 
   &__desc {
     position: absolute;
+    left: 50%;
     bottom: 48px;
-    left: 50px;
-    right: 50px;
     width: 100%;
     max-width: 354px;
+    transform: translateX(-50%);
   }
 
   .subtext {
@@ -46,26 +45,48 @@
     text-transform: uppercase;
   }
 
+  @include media(tablet-wide) {
+    padding-bottom: 80px;
+
+    .subtext {
+      max-width: 100%;
+      translate: none;
+    }
+  }
+
   @include media(tablet) {
-    &__title {
-      margin-bottom: 30px;
+    padding-bottom: 40px;
+
+    &__list {
+      margin-bottom: 60px;
+      gap: 25px;
     }
 
     &__author {
       margin: 0 auto;
       max-width: 100%;
     }
-
-    li {
-      grid-template-columns: 1fr;
-      padding: 16px;
-      gap: 25px;
-    }
   }
 
-  @include media(mobile-m) {
+  @include media(mobile-l) {
     &__list {
       grid-template-columns: 1fr;
+    }
+
+    &__item {
+      &:first-of-type {
+        translate: none;
+      }
+
+      img {
+        width: 100%;
+        object-position: top;
+        aspect-ratio: 12/9;
+      }
+    }
+
+    &__desc {
+      max-width: 100%;
     }
   }
 }

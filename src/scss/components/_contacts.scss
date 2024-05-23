@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 100px 0;
+    gap: 25px;
 
     &::before {
       content: "";
@@ -22,9 +23,9 @@
 
   &__form {
     display: flex;
-    gap: 16px;
     width: 100%;
     max-width: 438px;
+    gap: 16px;
 
     label {
       border: 0;
@@ -33,8 +34,8 @@
 
     input {
       overflow: hidden;
-      border-radius: 100px;
       border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 100px;
       padding: 9px 19px;
       width: 100%;
       max-width: 100%;
@@ -43,8 +44,8 @@
 
       &::placeholder {
         font-size: 14px;
-        color: var(--color-gray-50);
         text-transform: uppercase;
+        color: var(--color-gray-50);
       }
     }
   }
@@ -60,17 +61,27 @@
     line-height: 1.05;
   }
 
+  @include media(tablet-wide) {
+    &__inner {
+      padding: 80px 0;
+    }
+  }
+
   @include media(tablet) {
+    &__inner {
+      padding: 50px 0;
+    }
   }
 
   @include media(mobile-l) {
-    input,
-    textarea {
-      padding: 16px;
+    &__inner {
+      flex-direction: column;
+      padding: 35px 0;
     }
 
-    textarea {
-      min-height: 130px;
+    &__form,
+    .subtext {
+      max-width: 100%;
     }
   }
 }

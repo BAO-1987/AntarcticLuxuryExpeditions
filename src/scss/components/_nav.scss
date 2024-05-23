@@ -17,7 +17,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    margin: 0  auto;
+    margin: 0 auto;
     padding-left: 60px;
   }
 
@@ -33,10 +33,10 @@
     line-height: 0.92;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    transition: opacity 0.3s linear;
+    transition: color 0.3s linear;
 
     &:hover {
-      color: var(--color-blue-300);
+      color: var(--color-blue-200);
     }
 
     &.true {
@@ -50,33 +50,21 @@
     gap: 16px;
   }
 
-
-  @include media(desktop) {
-    &__item {
-      &:not(:last-child) {
-        margin-right: 15px;
-      }
-    }
-
-    &__list {
-      margin-right: 15px;
-    }
-  }
-
-  @include media(tablet-wide) {
+  @include media(tablet) {
     &__inner {
       position: fixed;
       right: 0;
       top: 0;
       z-index: -1;
       flex-direction: column;
+      align-items: center;
       justify-content: flex-start;
       overflow-y: auto;
       padding-top: calc(var(--header-height) * 1.2);
       width: 100%;
       height: var(--vh);
       max-width: 350px;
-      background-color: var(--color-blue-600);
+      background-color: var(--color-black);
       transform: translateX(150%);
       transition-property: transform;
       transition-duration: 0.25s;
@@ -85,34 +73,19 @@
     &__list {
       z-index: -1;
       flex-direction: column;
-      margin: 0;
+      align-items: center;
+      margin: 0 0 20px;
+      padding: 0;
     }
 
     &__item {
-      margin-bottom: 30px;
-
       &:not(:last-child) {
-        margin-right: 0;
+        margin-bottom: 25px;
       }
     }
 
     &__link {
       font-size: 20px;
-    }
-  }
-
-  @include media(tablet) {
-    &--footer {
-      padding: 25px 0;
-    }
-  }
-
-  @include media(mobile-l) {
-    &--footer {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 25px;
     }
   }
 }
