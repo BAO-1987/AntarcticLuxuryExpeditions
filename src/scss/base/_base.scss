@@ -165,12 +165,10 @@ body {
   }
 
   @include media(tablet) {
-    padding: 35px 0;
+    padding: 40px 0;
 
     li {
-      &:not(:last-child) {
-        margin-bottom: 30px;
-      }
+      padding: 35px 0;
     }
   }
 }

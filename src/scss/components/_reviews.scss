@@ -71,6 +71,7 @@
   @include media(mobile-l) {
     &__list {
       grid-template-columns: 1fr;
+      margin-bottom: 25px;
     }
 
     &__item {
@@ -86,6 +87,7 @@
     }
 
     &__desc {
+      bottom: 10px;
       max-width: 100%;
     }
   }

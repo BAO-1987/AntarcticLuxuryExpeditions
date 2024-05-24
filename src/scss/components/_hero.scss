@@ -121,6 +121,12 @@
         justify-content: end;
       }
     }
+
+    &--articles {
+      #{$root}__inner {
+        min-height: 450px;
+      }
+    }
   }
 
   @include media(mobile-m) {
