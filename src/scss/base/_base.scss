@@ -36,10 +36,10 @@ body {
     }
 
     &--decor {
+      max-height: 1440px;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      max-height: 1440px;
 
       &.articles {
         max-height: 884px;
@@ -206,6 +206,10 @@ body {
   justify-content: center;
   width: 100%;
   max-width: 280px;
+
+  @include media(mobile-l) {
+    max-width: 200px;
+  }
 }
 
 .transparent {
